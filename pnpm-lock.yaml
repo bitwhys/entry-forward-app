@@ -118,6 +118,13 @@ importers:
   packages/typescript-config: {}
 
   packages/ui:
+    dependencies:
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
     devDependencies:
       '@acme/theme':
         specifier: workspace:^
@@ -143,9 +150,15 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      tailwind-merge:
+        specifier: ^2.2.0
+        version: 2.2.0
       tailwindcss:
         specifier: ^3.3.5
         version: 3.4.0
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.0)
       tsup:
         specifier: ^8.0.1
         version: 8.0.1(postcss@8.4.31)(typescript@5.3.2)
@@ -1573,6 +1586,13 @@ packages:
       regenerator-runtime: 0.14.0
     dev: true
 
+  /@babel/runtime@7.23.7:
+    resolution: {integrity: sha512-w06OXVOFso7LcbzMiDGt+3X7Rh7Ho8MmgPoWU3rarH+8upf+wSU/grlGbWzQyr3DkdN6ZeuMFjpdwW0Q+HxobA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.0
+    dev: true
+
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
     engines: {node: '>=6.9.0'}
@@ -1652,7 +1672,7 @@ packages:
   /@changesets/apply-release-plan@6.1.2:
     resolution: {integrity: sha512-H8TV9E/WtJsDfoDVbrDGPXmkZFSv7W2KLqp4xX4MKZXshb0hsQZUNowUa8pnus9qb/5OZrFFRVsUsDCVHNW/AQ==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/config': 2.2.0
       '@changesets/get-version-range-type': 0.3.2
       '@changesets/git': 1.5.0
@@ -1670,7 +1690,7 @@ packages:
   /@changesets/assemble-release-plan@5.2.2:
     resolution: {integrity: sha512-B1qxErQd85AeZgZFZw2bDKyOfdXHhG+X5S+W3Da2yCem8l/pRy4G/S7iOpEcMwg6lH8q2ZhgbZZwZ817D+aLuQ==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/errors': 0.1.4
       '@changesets/get-dependents-graph': 1.3.4
       '@changesets/types': 5.2.0
@@ -1753,7 +1773,7 @@ packages:
   /@changesets/get-release-plan@3.0.15:
     resolution: {integrity: sha512-W1tFwxE178/en+zSj/Nqbc3mvz88mcdqUMJhRzN1jDYqN3QI4ifVaRF9mcWUU+KI0gyYEtYR65tour690PqTcA==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/assemble-release-plan': 5.2.2
       '@changesets/config': 2.2.0
       '@changesets/pre': 1.0.13
@@ -1769,7 +1789,7 @@ packages:
   /@changesets/git@1.5.0:
     resolution: {integrity: sha512-Xo8AT2G7rQJSwV87c8PwMm6BAc98BnufRMsML7m7Iw8Or18WFvFmxqG5aOL5PBvhgq9KrKvaeIBNIymracSuHg==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/errors': 0.1.4
       '@changesets/types': 5.2.0
       '@manypkg/get-packages': 1.1.3
@@ -1793,7 +1813,7 @@ packages:
   /@changesets/pre@1.0.13:
     resolution: {integrity: sha512-jrZc766+kGZHDukjKhpBXhBJjVQMied4Fu076y9guY1D3H622NOw8AQaLV3oQsDtKBTrT2AUFjt9Z2Y9Qx+GfA==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/errors': 0.1.4
       '@changesets/types': 5.2.0
       '@manypkg/get-packages': 1.1.3
@@ -1803,7 +1823,7 @@ packages:
   /@changesets/read@0.5.8:
     resolution: {integrity: sha512-eYaNfxemgX7f7ELC58e7yqQICW5FB7V+bd1lKt7g57mxUrTveYME+JPaBPpYx02nP53XI6CQp6YxnR9NfmFPKw==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/git': 1.5.0
       '@changesets/logger': 0.0.5
       '@changesets/parse': 0.3.15
@@ -1824,7 +1844,7 @@ packages:
   /@changesets/write@0.2.2:
     resolution: {integrity: sha512-kCYNHyF3xaId1Q/QE+DF3UTrHTyg3Cj/f++T8S8/EkC+jh1uK2LFnM9h+EzV+fsmnZDrs7r0J4LLpeI/VWC5Hg==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/types': 5.2.0
       fs-extra: 7.0.1
       human-id: 1.0.2
@@ -2624,7 +2644,7 @@ packages:
   /@manypkg/find-root@1.1.0:
     resolution: {integrity: sha512-mki5uBvhHzO8kYYix/WRy2WX8S3B5wdVSc9D6KcU5lQNglP2yt58/VfLuAK49glRXChosY8ap2oJ1qgma3GUVA==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@types/node': 12.20.55
       find-up: 4.1.0
       fs-extra: 8.1.0
@@ -2633,7 +2653,7 @@ packages:
   /@manypkg/get-packages@1.1.3:
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
     dependencies:
-      '@babel/runtime': 7.20.6
+      '@babel/runtime': 7.22.15
       '@changesets/types': 4.1.0
       '@manypkg/find-root': 1.1.0
       fs-extra: 8.1.0
@@ -5588,6 +5608,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /class-variance-authority@0.7.0:
+    resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
+    dependencies:
+      clsx: 2.0.0
+    dev: false
+
   /clean-regexp@1.0.0:
     resolution: {integrity: sha512-GfisEZEJvzKrmGWkvfhgzcz/BllN1USeqD2V6tg14OAOgaCD2Z/PUEuxnAZ/nPvmaHRG7a8y77p1T/IRQ4D1Hw==}
     engines: {node: '>=4'}
@@ -5665,6 +5691,16 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: true
+
+  /clsx@2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -11089,6 +11125,20 @@ packages:
     dependencies:
       '@pkgr/utils': 2.3.1
       tslib: 2.6.2
+    dev: true
+
+  /tailwind-merge@2.2.0:
+    resolution: {integrity: sha512-SqqhhaL0T06SW59+JVNfAqKdqLs0497esifRrZ7jOaefP3o64fdFNDMrAQWZFMxTLJPiHVjRLUywT8uFz1xNWQ==}
+    dependencies:
+      '@babel/runtime': 7.23.7
+    dev: true
+
+  /tailwindcss-animate@1.0.7(tailwindcss@3.4.0):
+    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      tailwindcss: 3.4.0
     dev: true
 
   /tailwindcss@3.4.0:

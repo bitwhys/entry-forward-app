@@ -28,6 +28,10 @@
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0"
+  },
   "devDependencies": {
     "@acme/theme": "workspace:^",
     "@repo/eslint-config": "workspace:*",
@@ -37,7 +41,9 @@
     "concurrently": "^8.2.2",
     "eslint": "^8.54.0",
     "react": "^18.2.0",
+    "tailwind-merge": "^2.2.0",
     "tailwindcss": "^3.3.5",
+    "tailwindcss-animate": "^1.0.7",
     "tsup": "^8.0.1",
     "typescript": "^5.3.2"
   },
