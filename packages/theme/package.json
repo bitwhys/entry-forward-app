@@ -1,0 +1,15 @@
+{
+  "name": "@acme/theme",
+  "version": "0.0.1",
+  "private": true,
+  "types": "./tailwind.plugin.ts",
+  "main": "./tailwind.plugin.ts",
+  "module": "./tailwind.plugin.ts",
+  "exports": {
+    ".": "./tailwind.plugin.ts"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "tailwindcss": "^3.3.5"
+  }
+}

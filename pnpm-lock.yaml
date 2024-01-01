@@ -119,6 +119,9 @@ importers:
 
   packages/ui:
     devDependencies:
+      '@acme/theme':
+        specifier: workspace:^
+        version: link:../theme
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
